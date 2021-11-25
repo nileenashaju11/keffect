@@ -1,0 +1,41 @@
+@import "variables";
+
+.mobile-menu {
+  .sidebar-content {
+    width: 80%;
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+
+    &.is-right {
+      right: -20rem;
+    }
+  }
+
+  .mobile-menu-header {
+    box-shadow: 0 2px 3px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1);
+
+    .not-logged-in {
+      .logo {
+        max-width: 75%;
+      }
+    }
+  }
+
+  .mobile-menu-content {
+    padding: 2rem 0;
+    flex: 1;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+
+  .mobile-menu-footer {
+    box-shadow: 0 -2px 3px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1);
+  }
+
+  &.is-active {
+    .sidebar-content.is-right {
+      right: 0;
+    }
+  }
+}

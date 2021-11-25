@@ -1,0 +1,50 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand" data-controller="sidebar">
+    <%= link_to root_path, class: 'navbar-item' do %>
+      <%= image_tag 'logo.png' %>
+    <% end %>
+
+    <div
+        class="navbar-burger burger"
+        data-action="click->sidebar#open"
+        data-target="sidebar.trigger" >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </div>
+    <%= render partial: 'shared/mobile_menu' %>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar=item"><%= image_tag 'lead_machine.png', style: "position: absolute; bottom: 28%;" %></div>
+    </div>
+    <div class="navbar-end">
+      <% if user_signed_in? %>
+        <%= link_to 'Home', root_path, class: 'navbar-item' %>
+        <%= link_to 'Leads', leads_path, class: 'navbar-item' %>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">
+            Admin
+          </a>
+          <div class="navbar-dropdown is-boxed">
+            <%= link_to 'Users', users_path, class: 'navbar-item' %>
+            <%= link_to 'Settings', settings_path, class: 'navbar-item' %>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">
+            <%= current_user.email %>
+          </a>
+          <div class="navbar-dropdown is-boxed">
+            <%= link_to 'Settings', edit_user_path(current_user), class: 'navbar-item' %>
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'navbar-item' %>
+          </div>
+        </div>
+
+      <% else %>
+        <%= link_to 'Log in', new_user_session_path, class: 'navbar-item' %>
+      <% end %>
+    </div>
+  </div>
+</nav>

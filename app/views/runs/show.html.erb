@@ -1,0 +1,6 @@
+
+<h1 class="title"><%= @run.lead.name %></h1>
+<p><%= format_phone_number(@run.lead.phone_number) %></p>
+<p><%= @run.lead.email %></p>
+
+<%= render partial: 'shared/history', locals: { histories: @run.histories } %>

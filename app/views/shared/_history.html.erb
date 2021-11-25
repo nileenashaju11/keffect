@@ -1,0 +1,12 @@
+<h2 class="subtitle">History</h2>
+
+<div class="table-container">
+  <table class="table is-hoverable is-striped is-fullwidth">
+    <% histories.order(:created_at).each do |history| %>
+      <tr>
+        <td><%= history.text %></td>
+        <td><%= history.created_at.to_formatted_s(:long) %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

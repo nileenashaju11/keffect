@@ -1,0 +1,32 @@
+<div class="table-container">
+  <table class="table is-striped is-fullwidth">
+    <thead>
+      <tr>
+        <th width=25%>Email</th>
+        <th>Current Step</th>
+        <th width=7%></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% runs.order(created_at: :desc).each do |run| %>
+        <tr data-run-id="<%= run.id %>">
+          <td><%= link_to run.lead.email, run_path(run) %></td>
+          <td>
+            <% if run.next_action && run.scheduled_job_id? %>
+              <strong><%= run.next_action.order %>. <%= run.next_action&.class&.name %> in about <%= distance_of_time_in_words(Time.current, (run.updated_at + run.next_action.delay.minutes)) %></strong>
+            <% elsif run.scheduled_job_id.nil? && run.next_action.nil? %>
+              <strong>Completed (<%= run.updated_at.strftime("%B %d, %Y") %>)</strong>
+            <% end %>
+          </td>
+          <td>
+            <% if run.scheduled_job_id? %>
+              <%= link_to 'Cancel', cancel_run_path(run), method: :put, data: { confirm: "Are you sure?" } %>
+            <% elsif run.next_action.present? %>
+              <%= link_to 'Resume', resume_run_path(run), method: :put, data: { confirm: "Are you sure?" } %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

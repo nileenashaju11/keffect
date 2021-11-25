@@ -1,0 +1,51 @@
+<nav class="level">
+  <!-- Left side -->
+  <div class="level-left">
+    <div class="level-item"><h1 class="title"><%= @flow.name %></h1></div>
+  </div>
+  <!-- Right side -->
+  <div class="level-right">
+    <div class="level-item"><%= link_to 'Edit Flow', edit_flow_path(@flow), class: 'button is-text is-rounded has-text-weight-semibold' %></div>
+    <div class="level-item"><%= link_to '+ New Action', new_flow_action_path(@flow), class: 'button is-link is-rounded has-text-weight-semibold' %></div>
+  </div>
+</nav>
+
+<div class="table-container">
+  <table class="table is-striped is-fullwidth" data-controller="draggable">
+    <thead>
+      <tr>
+        <th width=10% class="has-text-centered">Order</th>
+        <th>Type</th>
+        <th>Delay</th>
+        <th>Name</th>
+        <th width=7%></th>
+        <th width=7%></th>
+      </tr>
+    </thead>
+    <tbody data-target="draggable.actions" class="draggable-target">
+      <% @flow.actions.each do |action| %>
+        <tr data-action-id="<%= action.id %>" class="draggable-source">
+          <td class="has-text-centered"><strong><%= action.order %></strong></td>
+          <td><strong><%= action.type %></strong></td>
+          <td><%= distance_of_time_in_words(action.delay.minutes).gsub('about ','') %></td>
+          <td><%= action.name.present? ? link_to(action.name, action_path(action)) : nil %></td>
+          <td><%= link_to 'Edit', edit_action_path(action) %></td>
+          <td><%= link_to 'Remove', action_path(action), method: :delete, data: { confirm: "Are you sure?" } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<nav class="level">
+  <!-- Left side -->
+  <div class="level-left">
+    <div class="level-item"><h2 class="subtitle">Runs</h2></div>
+  </div>
+  <!-- Right side -->
+  <div class="level-right">
+    <div class="level-item"><%= link_to '+ New Run', new_run_path(flow_id: @flow.id), class: 'button is-link is-rounded has-text-weight-semibold' %></div>
+  </div>
+</nav>
+
+<%= render partial: 'runs/table', locals: { runs: @flow.runs } %>

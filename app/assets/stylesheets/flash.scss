@@ -1,0 +1,18 @@
+.flash {
+  position: absolute !important;
+  width: 100%;
+  z-index: 1;
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.flash.closed {
+  max-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  p {
+    opacity: 0 !important;
+  }
+}

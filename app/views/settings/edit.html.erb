@@ -1,0 +1,3 @@
+<h1 class="title"><%= @setting.key.titleize %></h1>
+
+<%= render partial: "#{@setting.key}_form", locals: { setting: @setting } %>

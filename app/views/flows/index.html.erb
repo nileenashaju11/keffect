@@ -1,0 +1,33 @@
+<nav class="level">
+  <!-- Left side -->
+  <div class="level-left">
+    <div class="level-item"><h1 class="title">Onboarding Flows</h1></div>
+  </div>
+  <!-- Right side -->
+  <div class="level-right">
+    <div class="level-item"><%= link_to '+ New Flow', new_flow_path, class: 'button is-link is-rounded has-text-weight-semibold' %></div>
+  </div>
+</nav>
+
+<div class="table-container">
+  <table class="table is-hoverable is-striped is-fullwidth">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Zendesk Stage</th>
+        <th width="7%"></th>
+        <th width="7%"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @flows.each do |flow| %>
+        <tr data-flow-id="<%= flow.id %>">
+          <td><strong><%= link_to flow.name, flow_path(flow) %></strong></td>
+          <td><%= flow.zendesk_stage&.name %></td>
+          <td class="has-text-right"><%= link_to 'Edit', edit_flow_path(flow) %></td>
+          <td class="has-text-right"><%= link_to 'Remove', flow_path(flow), method: :delete, data: { confirm: "Are you sure?" } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

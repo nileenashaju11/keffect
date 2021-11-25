@@ -1,0 +1,42 @@
+<%= form_with url: bulk_destroy_leads_path, method: :delete do %>
+  <nav class="level">
+    <!-- Left side -->
+    <div class="level-left">
+      <div class="level-item"><h1 class="title">Leads</h1></div>
+    </div>
+    <!-- Right side -->
+    <div class="level-right">
+      <div class="level-item"><%= submit_tag 'Remove Selected', class: 'button is-text is-rounded has-text-weight-semibold', data: { confirm: "Are you sure?" } %></div>
+      <div class="level-item"><%= link_to '+ New Lead', new_lead_path, class: 'button is-link is-rounded has-text-weight-semibold' %></div>
+    </div>
+  </nav>
+
+  <div class="table-container">
+    <table class="table is-hoverable is-striped is-fullwidth">
+      <thead>
+        <tr>
+          <th width="3%"></th>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>Date Created</th>
+          <th width="7%"></th>
+          <th width="7%"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @leads.each do |lead| %>
+          <tr data-lead-id="<%= lead.id %>">
+            <td><%= check_box_tag 'deleted[]', lead.id %></td>
+            <td><strong><%= link_to lead.name, lead_path(lead) %></strong></td>
+            <td><%= format_phone_number(lead.phone_number) %></td>
+            <td><%= lead.email %></td>
+            <td><%= l(lead.created_at, format: :long) %></td>
+            <td class="has-text-right"><%= link_to 'Edit', edit_lead_path(lead) %></td>
+            <td class="has-text-right"><%= link_to 'Remove', lead_path(lead), method: :delete, data: { confirm: "Are you sure?" } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

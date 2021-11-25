@@ -1,0 +1,90 @@
+{
+  "status": 202,
+  "body": {
+    "table": {
+      "_links": {
+        "table": {
+          "self": "https://api2.frontapp.com/messages/msg_test",
+          "related": {
+            "table": {
+              "conversation": "https://api2.frontapp.com/conversations/cnv_test"
+            },
+            "modifiable": true
+          }
+        },
+        "modifiable": true
+      },
+      "id": "msg_test",
+      "type": "email",
+      "is_inbound": false,
+      "created_at": 1589490021.101,
+      "blurb": "Oh, hi!",
+      "body": "<div class=\"fa-rbq0wf\">\n  <div>\n<strong>Oh, hi!</strong></div>\n</div>\n",
+      "text": "Oh, hi!",
+      "is_draft": true,
+      "error_type": null,
+      "version": "260132ba1ed8146d2a887c0eae87fa3c-4259409-1589490021101-506c",
+      "subject": "Test",
+      "metadata": {
+        "table": {}
+      },
+      "author": null,
+      "recipients": [
+        {
+          "table": {
+            "_links": {
+              "table": {
+                "related": {
+                  "table": {
+                    "contact": null
+                  },
+                  "modifiable": true
+                }
+              },
+              "modifiable": true
+            },
+            "handle": "test@example.com",
+            "role": "from"
+          },
+          "modifiable": true
+        },
+        {
+          "table": {
+            "_links": {
+              "table": {
+                "related": {
+                  "table": {
+                    "contact": null
+                  },
+                  "modifiable": true
+                }
+              },
+              "modifiable": true
+            },
+            "handle": "test@example.com",
+            "role": "to"
+          },
+          "modifiable": true
+        }
+      ],
+      "attachments": [],
+      "conversation_reference": "260132ba1ed8146d2a887c0eae87fa3c@frontapp.com",
+      "message_uid": "260132ba1ed8146d2a887c0eae87fa3c",
+      "status": "accepted"
+    },
+    "modifiable": true
+  },
+  "response_headers": {
+    "date": "Thu, 14 May 2020 21:00:21 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "889",
+    "connection": "keep-alive",
+    "x-protected-by": "Sqreen",
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "99",
+    "x-ratelimit-reset": "1589490080.786",
+    "x-front-tier": "2",
+    "etag": "W/\"379-Cd6kPEYTaUdRuxyLrp3XWbd414E\"",
+    "x-front-time": "1018"
+  }
+}

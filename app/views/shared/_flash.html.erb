@@ -1,0 +1,6 @@
+<% flash.each do |key, value| %>
+  <div class="notification flash is-<%= bulma_flash_class(key) %>" data-controller="flash">
+    <button class="delete" data-action="click->flash#close"></button>
+    <%= content_tag :p, value.html_safe, class: "title is-5 has-text-centered" %>
+  </div>
+<% end %>

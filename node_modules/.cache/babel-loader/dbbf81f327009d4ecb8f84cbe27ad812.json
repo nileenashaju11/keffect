@@ -1,0 +1,1 @@
+{"ast":null,"code":"import \"core-js/fn/array/find\";\nimport \"core-js/fn/array/find-index\";\nimport \"core-js/fn/array/from\";\nimport \"core-js/fn/map\";\nimport \"core-js/fn/object/assign\";\nimport \"core-js/fn/promise\";\nimport \"core-js/fn/set\";\nimport \"element-closest\";\nimport \"mutation-observer-inner-html-shim\";","map":null,"metadata":{},"sourceType":"module"}

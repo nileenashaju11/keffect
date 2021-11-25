@@ -1,0 +1,33 @@
+<h1 class="title"><%= user.email %></h1>
+
+<div class="card">
+  <div class="card-content">
+    <div class="content">
+      <%= form_for @user,
+        url: @user.new_record? ? users_path : user_path(@user),
+        method: @user.new_record? ? :post : :put do |f| %>
+        <div class="field">
+          <%= f.label :email, class: 'label' %>
+          <p class="control">
+            <%= f.email_field :email, class: 'input' %>
+          </p>
+        </div>
+        <% if @user == current_user %>
+          <%# Current users can change their own password %>
+          <div class="field">
+            <%= f.label :password, class: 'label' %>
+            <p class="control">
+              <%= f.password_field :password, class: 'input' %>
+            </p>
+          </div>
+        <% end %>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button type="submit" class="button is-link is-rounded">Save</button>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

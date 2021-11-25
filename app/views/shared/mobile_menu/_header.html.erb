@@ -1,0 +1,25 @@
+<div class="hero is-primary">
+  <div class="hero-body">
+    <% if user_signed_in? %>
+      <div class="media">
+        <div class="media-left">
+          <%= render partial: 'shared/profile_picture', locals: { dimensions: '64x64' } %>
+        </div>
+        <div class="media-content">
+          <p class="title is-4">
+            <%= current_user.email %>
+          </p>
+        </div>
+      </div>
+    <% else %>
+      <div class="not-logged-in has-text-centered">
+        <p class="title is-6 is-uppercase is-marginless">
+          welcome to
+        </p>
+        <figure class="image logo is-centered is-128x128 is-vcentered">
+          <%= image_tag 'logo.png' %>
+        </figure>
+      </div>
+    <% end %>
+  </div>
+</div>

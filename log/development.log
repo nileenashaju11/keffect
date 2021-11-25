@@ -1,0 +1,1062 @@
+Started GET "/" for 127.0.0.1 at 2021-05-25 21:18:23 +0530
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "keffect" does not exist
+):
+  
+activerecord (6.0.3.7) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.7) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.7) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.7) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.1.2) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.1.2) lib/rollbar.rb:145:in `scoped'
+rollbar (3.1.2) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+rollbar (3.1.2) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (719.6ms)[0m  [1m[35mCREATE DATABASE "keffect" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2021-05-25 21:21:03 +0530
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.7) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.7) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.1.2) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.1.2) lib/rollbar.rb:145:in `scoped'
+rollbar (3.1.2) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+rollbar (3.1.2) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (84.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (78.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(671797466509342320)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20190625024405)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (73.5ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (35.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  [1m[35m (83.6ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (35.1ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  [1m[35m (70.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190625024405"]]
+  [1m[35m (9.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActionTextTables (20190709033203)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (63.8ms)[0m  [1m[35mCREATE TABLE "action_text_rich_texts" ("id" bigserial primary key, "name" character varying NOT NULL, "body" text, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (28.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_action_text_rich_texts_uniqueness" ON "action_text_rich_texts"  ("record_type", "record_id", "name")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190709033203"]]
+  [1m[35m (16.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20190723043155)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (95.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (53.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (28.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190723043155"]]
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFlow (20200505204609)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (74.3ms)[0m  [1m[35mCREATE TABLE "flows" ("id" bigserial primary key, "name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200505204609"]]
+  [1m[35m (14.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAction (20200505205130)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.6ms)[0m  [1m[35mCREATE TABLE "actions" ("id" bigserial primary key, "flow_id" bigint, "order" integer DEFAULT 1, "text" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (36.9ms)[0m  [1m[35mCREATE  INDEX  "index_actions_on_flow_id" ON "actions"  ("flow_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200505205130"]]
+  [1m[35m (13.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLead (20200505211037)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (83.6ms)[0m  [1m[35mCREATE TABLE "leads" ("id" bigserial primary key, "name" character varying, "phone_number" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200505211037"]]
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLeadFlowJoinTable (20200505211332)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "flows_leads" ("lead_id" bigint NOT NULL, "flow_id" bigint NOT NULL)[0m
+  [1m[35m (43.4ms)[0m  [1m[35mCREATE  INDEX  "index_flows_leads_on_lead_id" ON "flows_leads"  ("lead_id")[0m
+  [1m[35m (45.0ms)[0m  [1m[35mCREATE  INDEX  "index_flows_leads_on_flow_id" ON "flows_leads"  ("flow_id")[0m
+  [1m[35m (44.9ms)[0m  [1m[35mCREATE  INDEX  "index_flows_leads_on_lead_id_and_flow_id" ON "flows_leads"  ("lead_id", "flow_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200505211332"]]
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRun (20200506230207)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "flows_leads" RENAME TO "runs"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER INDEX "index_flows_leads_on_flow_id" RENAME TO "index_runs_on_flow_id"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER INDEX "index_flows_leads_on_lead_id" RENAME TO "index_runs_on_lead_id"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER INDEX "index_flows_leads_on_lead_id_and_flow_id" RENAME TO "index_runs_on_lead_id_and_flow_id"[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200506230207"]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ExpandRuns (20200506230352)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (35.7ms)[0m  [1m[35mALTER TABLE "runs" ADD "status" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200506230352"]]
+  [1m[35m (11.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ExpandActions (20200506230752)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "actions" ADD "type" character varying[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "actions" ADD "delay" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200506230752"]]
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddActionPointersToRun (20200507215259)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (155.9ms)[0m  [1m[35mALTER TABLE "runs" ADD "id" bigserial primary key[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "runs" ADD "previous_action_id" bigint[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "runs" ADD "next_action_id" bigint[0m
+  [1m[35m (29.6ms)[0m  [1m[35mCREATE  INDEX  "index_runs_on_previous_action_id" ON "runs"  ("previous_action_id")[0m
+  [1m[35m (28.2ms)[0m  [1m[35mCREATE  INDEX  "index_runs_on_next_action_id" ON "runs"  ("next_action_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200507215259"]]
+  [1m[35m (11.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDefaultDelay (20200507225111)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mALTER TABLE "actions" ALTER COLUMN "delay" TYPE integer, ALTER COLUMN "delay" SET DEFAULT 0[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200507225111"]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateHistory (20200508024140)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (62.9ms)[0m  [1m[35mCREATE TABLE "histories" ("id" bigserial primary key, "text" text NOT NULL, "subject_type" character varying, "subject_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (36.6ms)[0m  [1m[35mCREATE  INDEX  "index_histories_on_subject_type_and_subject_id" ON "histories"  ("subject_type", "subject_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200508024140"]]
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddScheduledJobIdToRun (20200508181256)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "runs" ADD "scheduled_job_id" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200508181256"]]
+  [1m[35m (33.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AllowNullOrder (20200512212745)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "actions" ALTER COLUMN "order" TYPE integer, ALTER COLUMN "order" DROP DEFAULT, ALTER COLUMN "order" DROP NOT NULL[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200512212745"]]
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RenameTextToSubject (20200513211225)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "actions" RENAME COLUMN "text" TO "subject"[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200513211225"]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddZendeskIdToLeads (20200527221204)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "leads" ADD "zendesk_id" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200527221204"]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddIndexToZendeskId (20200528152406)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (44.7ms)[0m  [1m[35mCREATE  INDEX  "index_leads_on_zendesk_id" ON "leads"  ("zendesk_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200528152406"]]
+  [1m[35m (15.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTimestampsToRuns (20200528171123)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "runs" ADD "created_at" timestamp(6)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "runs" ADD "updated_at" timestamp(6)[0m
+  [1m[36mRun Update All (0.5ms)[0m  [1m[33mUPDATE "runs" SET "created_at" = $1, "updated_at" = $2[0m  [["created_at", "2021-05-25 17:21:44.684084"], ["updated_at", "2021-05-25 17:21:44.684098"]]
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "runs" ALTER COLUMN "created_at" SET NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "runs" ALTER COLUMN "updated_at" SET NOT NULL[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200528171123"]]
+  [1m[35m (10.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddZendeskStatusToFlow (20200609182529)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (91.1ms)[0m  [1m[35mCREATE TABLE "zendesk_statuses" ("id" bigserial primary key, "status" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (36.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_zendesk_statuses_on_status" ON "zendesk_statuses"  ("status")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "flows" ADD "zendesk_status_id" bigint[0m
+  [1m[35m (33.8ms)[0m  [1m[35mCREATE  INDEX  "index_flows_on_zendesk_status_id" ON "flows"  ("zendesk_status_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200609182529"]]
+  [1m[35m (14.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToAction (20200609232848)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "actions" ADD "name" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200609232848"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateZendeskStages (20200615232026)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (109.2ms)[0m  [1m[35mCREATE TABLE "zendesk_stages" ("id" bigserial primary key, "name" character varying NOT NULL, "position" character varying NOT NULL, "zendesk_id" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (44.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_zendesk_stages_on_name" ON "zendesk_stages"  ("name")[0m
+  [1m[35m (45.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_zendesk_stages_on_zendesk_id" ON "zendesk_stages"  ("zendesk_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "flows" ADD "zendesk_stage_id" bigint[0m
+  [1m[35m (42.3ms)[0m  [1m[35mCREATE  INDEX  "index_flows_on_zendesk_stage_id" ON "flows"  ("zendesk_stage_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200615232026"]]
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSettings (20200619163821)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (93.5ms)[0m  [1m[35mCREATE TABLE "settings" ("id" bigserial primary key, "key" character varying NOT NULL, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (44.9ms)[0m  [1m[35mCREATE  INDEX  "index_settings_on_key" ON "settings"  ("key")[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200619163821"]]
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUniqueIndexToSettings (20200624032845)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP INDEX  "index_settings_on_key"[0m
+  [1m[35m (32.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_settings_on_key" ON "settings"  ("key")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200624032845"]]
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddZendeskStageToLeads (20200625183513)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "leads" ADD "zendesk_stage_id" integer[0m
+  [1m[36mLead Load (1.1ms)[0m  [1m[34mSELECT "leads".* FROM "leads" ORDER BY "leads"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200625183513"]]
+  [1m[35m (21.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAppointments (20200701203145)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (69.2ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" bigserial primary key, "email" character varying, "acuity_appointment_id" character varying NOT NULL, "mindbody_class_id" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (44.9ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_email" ON "appointments"  ("email")[0m
+  [1m[35m (36.9ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_acuity_appointment_id" ON "appointments"  ("acuity_appointment_id")[0m
+  [1m[35m (36.7ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_mindbody_class_id" ON "appointments"  ("mindbody_class_id")[0m
+  [1m[35m (36.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "acuity_mindbody_index" ON "appointments"  ("acuity_appointment_id", "mindbody_class_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200701203145"]]
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddStartsAtToAppointments (20200701211326)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "appointments" ADD "starts_at" timestamp[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200701211326"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-25 17:21:45.802938"], ["updated_at", "2021-05-25 17:21:45.802938"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(671797466509342320)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-05-25 22:51:56 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 210)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.0ms | Allocations: 11474)
+
+
+  
+ActionView::Template::Error (couldn't find file 'trix/dist/trix' with type 'text/css'
+Checked in these paths: 
+  /home/techversant/aptana_studio_projet/keffect_lead_nurturer-master/app/assets/config
+  /home/techversant/aptana_studio_projet/keffect_lead_nurturer-master/app/assets/images
+  /home/techversant/aptana_studio_projet/keffect_lead_nurturer-master/app/assets/stylesheets
+  /home/techversant/.rvm/gems/ruby-2.6.6@keffect/gems/actioncable-6.0.3.7/app/assets/javascripts
+  /home/techversant/.rvm/gems/ruby-2.6.6@keffect/gems/activestorage-6.0.3.7/app/assets/javascripts
+  /home/techversant/.rvm/gems/ruby-2.6.6@keffect/gems/actionview-6.0.3.7/lib/assets/compiled
+  /home/techversant/.rvm/gems/ruby-2.6.6@keffect/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/techversant/aptana_studio_projet/keffect_lead_nurturer-master/node_modules):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/actiontext.scss:6
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2021-05-25 23:36:42 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 210)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms | Allocations: 6890)
+
+
+  
+ActionView::Template::Error (couldn't find file 'trix/dist/trix' with type 'text/css'
+Checked in these paths: 
+  /home/techversant/aptana_studio_projet/keffect_lead_nurturer-master/app/assets/config
+  /home/techversant/aptana_studio_projet/keffect_lead_nurturer-master/app/assets/images
+  /home/techversant/aptana_studio_projet/keffect_lead_nurturer-master/app/assets/stylesheets
+  /home/techversant/.rvm/gems/ruby-2.6.6@keffect/gems/actioncable-6.0.3.7/app/assets/javascripts
+  /home/techversant/.rvm/gems/ruby-2.6.6@keffect/gems/activestorage-6.0.3.7/app/assets/javascripts
+  /home/techversant/.rvm/gems/ruby-2.6.6@keffect/gems/actionview-6.0.3.7/lib/assets/compiled
+  /home/techversant/.rvm/gems/ruby-2.6.6@keffect/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/techversant/aptana_studio_projet/keffect_lead_nurturer-master/node_modules):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/actiontext.scss:6
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2021-05-25 23:38:12 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.0ms | Allocations: 12146)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bulma/bulma.
+        on line 6:1 of app/assets/stylesheets/theme.scss
+>> @import "bulma/bulma";
+
+   ^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/theme.scss:6
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2021-05-25 23:39:45 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 6961)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bulma-switch/dist/css/bulma-switch.min.
+        on line 7:1 of app/assets/stylesheets/theme.scss
+>> @import "bulma-switch/dist/css/bulma-switch.min";
+
+   ^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/theme.scss:7
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2021-05-25 23:40:05 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1800ms (ActiveRecord: 0.0ms | Allocations: 33572)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/techversant/aptana_studio_projet/keffect_lead_nurturer-master/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body data-controller="icons">
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2021-05-26 00:14:48 +0530
+  [1m[35m (19.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 210)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/usr/bin/env: ‘node’: No such file or directory
+/usr/bin/env: ‘node’: No such file or directory
+
+Completed 500 Internal Server Error in 841ms (ActiveRecord: 0.0ms | Allocations: 14135)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/techversant/aptana_studio_projet/keffect_lead_nurturer-master/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body data-controller="icons">
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2021-05-26 11:59:06 +0530
+  [1m[35m (18.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 25.4ms | Allocations: 210)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/usr/bin/env: ‘node’: No such file or directory
+/usr/bin/env: ‘node’: No such file or directory
+
+Completed 500 Internal Server Error in 853ms (ActiveRecord: 0.0ms | Allocations: 14134)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/techversant/aptana_studio_projet/keffect_lead_nurturer-master/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body data-controller="icons">
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2021-05-26 12:06:41 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 210)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/techversant/aptana_studio_projet/keffect_lead_nurturer-master/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 3ea4e405f7f7952ee52f
+Version: webpack 4.46.0
+Time: 5411ms
+Built at: 05/26/2021 12:06:48 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e614eb64453e285edd4b.js   2.46 MiB  application  [emitted] [immutable]  application
+js/application-e614eb64453e285edd4b.js.map   2.39 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e614eb64453e285edd4b.js js/application-e614eb64453e285edd4b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive .js$] ./app/javascript/controllers sync .js$ 302 bytes {application} [built]
+[./app/javascript/controllers/action_form_controller.js] 5.22 KiB {application} [optional] [built]
+[./app/javascript/controllers/draggable_controller.js] 4.3 KiB {application} [optional] [built]
+[./app/javascript/controllers/flash_controller.js] 3.59 KiB {application} [optional] [built]
+[./app/javascript/controllers/icons_controller.js] 3.32 KiB {application} [optional] [built]
+[./app/javascript/controllers/sidebar_controller.js] 3.59 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 757 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 157 hidden modules
+
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.6ms | Allocations: 499)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.4ms | Allocations: 244)
+  Rendered shared/_mobile_menu.html.erb (Duration: 2.2ms | Allocations: 1612)
+  Rendered shared/_navbar.html.erb (Duration: 37.5ms | Allocations: 3309)
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 164)
+Completed 200 OK in 6602ms (Views: 6601.3ms | ActiveRecord: 0.0ms | Allocations: 17215)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-26 12:08:56 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.2ms | Allocations: 282)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.6ms | Allocations: 571)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 1643)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 338ms (Views: 338.1ms | ActiveRecord: 0.0ms | Allocations: 63350)
+
+
+Started GET "/accounts/sign_in" for 127.0.0.1 at 2021-05-26 12:09:06 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 545)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 1263.4ms | Allocations: 1404897)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.2ms | Allocations: 300)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.6ms | Allocations: 589)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 1652)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 1432ms (Views: 1269.8ms | ActiveRecord: 144.3ms | Allocations: 1418426)
+
+
+Started GET "/accounts/sign_in" for 127.0.0.1 at 2021-05-26 12:09:29 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 85)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 1.1ms | Allocations: 945)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.3ms | Allocations: 299)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.7ms | Allocations: 587)
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 1645)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 7535)
+
+
+Started GET "/accounts/sign_in" for 127.0.0.1 at 2021-05-26 12:09:54 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 85)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 1.0ms | Allocations: 938)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.3ms | Allocations: 299)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.6ms | Allocations: 587)
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 1655)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 7539)
+
+
+Started POST "/accounts/sign_in" for 127.0.0.1 at 2021-05-26 12:09:58 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"sktKkYRodPnDNkXMtecLMKuST/5/WWk9mQx00P1aRCi8HDK9htxSiQxMUUyoWLSre8B8fQhz9o7cnVc3mZVmjQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 491)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"sktKkYRodPnDNkXMtecLMKuST/5/WWk9mQx00P1aRCi8HDK9htxSiQxMUUyoWLSre8B8fQhz9o7cnVc3mZVmjQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 85)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 1.0ms | Allocations: 939)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.3ms | Allocations: 286)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.2ms | Allocations: 68)
+  Rendered shared/_mobile_menu.html.erb (Duration: 3.1ms | Allocations: 580)
+  Rendered shared/_navbar.html.erb (Duration: 4.4ms | Allocations: 1644)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 7428)
+
+
+Started GET "/accounts/password/new" for 127.0.0.1 at 2021-05-26 12:10:01 +0530
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/devise
+  Rendered devise/shared/_error_messages.html.erb (Duration: 8.8ms | Allocations: 209)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 128)
+  Rendered devise/passwords/new.html.erb within layouts/devise (Duration: 51.8ms | Allocations: 1352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.3ms | Allocations: 300)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.3ms | Allocations: 63)
+  Rendered shared/_mobile_menu.html.erb (Duration: 1.0ms | Allocations: 589)
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 1651)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 58ms (Views: 57.4ms | ActiveRecord: 0.0ms | Allocations: 8147)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-26 12:14:35 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.9ms | Allocations: 282)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.5ms | Allocations: 63)
+  Rendered shared/_mobile_menu.html.erb (Duration: 2.9ms | Allocations: 571)
+  Rendered shared/_navbar.html.erb (Duration: 6.5ms | Allocations: 1643)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 6188)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-26 12:20:25 +0530
+  
+PG::ConnectionBad (fe_sendauth: no password supplied
+):
+  
+pg (1.2.3) lib/pg.rb:58:in `initialize'
+pg (1.2.3) lib/pg.rb:58:in `new'
+pg (1.2.3) lib/pg.rb:58:in `connect'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.7) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.7) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.7) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.1.2) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.1.2) lib/rollbar.rb:145:in `scoped'
+rollbar (3.1.2) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+rollbar (3.1.2) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2021-05-26 12:23:44 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 1.1ms | Allocations: 499)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.3ms | Allocations: 244)
+  Rendered shared/_mobile_menu.html.erb (Duration: 2.5ms | Allocations: 1612)
+  Rendered shared/_navbar.html.erb (Duration: 4.5ms | Allocations: 3284)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 164)
+Completed 200 OK in 146ms (Views: 145.0ms | ActiveRecord: 0.0ms | Allocations: 24754)
+
+
+Started GET "/accounts/sign_in" for 127.0.0.1 at 2021-05-26 12:23:52 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 543)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 177.6ms | Allocations: 353591)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.3ms | Allocations: 300)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.6ms | Allocations: 589)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 1652)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 218ms (Views: 184.9ms | ActiveRecord: 10.4ms | Allocations: 366827)
+
+
+Started GET "/accounts/sign_in" for 127.0.0.1 at 2021-05-26 12:23:58 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 85)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 4.2ms | Allocations: 945)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.5ms | Allocations: 299)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered shared/_mobile_menu.html.erb (Duration: 1.2ms | Allocations: 587)
+  Rendered shared/_navbar.html.erb (Duration: 3.6ms | Allocations: 1645)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 7538)
+
+
+Started GET "/accounts/sign_in" for 127.0.0.1 at 2021-05-26 12:26:44 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 85)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 6.2ms | Allocations: 939)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.4ms | Allocations: 299)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered shared/_mobile_menu.html.erb (Duration: 1.2ms | Allocations: 587)
+  Rendered shared/_navbar.html.erb (Duration: 3.6ms | Allocations: 1645)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.0ms | Allocations: 7527)
+
+
+Started GET "/accounts/sign_in" for 127.0.0.1 at 2021-05-26 12:32:08 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 85)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 1.1ms | Allocations: 938)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.5ms | Allocations: 299)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered shared/_mobile_menu.html.erb (Duration: 1.2ms | Allocations: 587)
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 1645)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 7515)
+
+
+Started GET "/accounts/sign_in" for 127.0.0.1 at 2021-05-26 12:33:56 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 85)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 1.0ms | Allocations: 939)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.2ms | Allocations: 299)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered shared/_mobile_menu.html.erb (Duration: 0.5ms | Allocations: 587)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 1645)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 7529)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-26 13:48:32 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_mobile_menu.html.erb (Duration: 1.0ms | Allocations: 571)
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 1643)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 6188)
+
+
+Started GET "/accounts/sign_in" for 127.0.0.1 at 2021-05-26 13:48:46 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 85)
+  Rendered devise/sessions/new.html.erb within layouts/devise (Duration: 4.4ms | Allocations: 938)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/mobile_menu/_header.html.erb (Duration: 0.5ms | Allocations: 299)
+  Rendered shared/mobile_menu/_content.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered shared/mobile_menu/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered shared/_mobile_menu.html.erb (Duration: 1.3ms | Allocations: 587)
+  Rendered shared/_navbar.html.erb (Duration: 3.4ms | Allocations: 1645)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 7515)
+
+

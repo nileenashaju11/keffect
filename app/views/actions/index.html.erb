@@ -1,0 +1,25 @@
+<%= link_to 'New Action', new_action_path(@flow), class: 'button is-link' %>
+
+<table class="table is-hoverable is-striped is-fullwidth">
+  <thead>
+    <tr>
+      <th>Order</th>
+      <th>Type</th>
+      <th>Subject</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @actions.each do |action| %>
+      <tr data-action-id="<%= action.id %>">
+        <td><%= action.order %></td>
+        <td><%= link_to action.subject, action_path(action) %></td>
+        <td><%= action.type %></td>
+        <td>
+          <%= link_to 'Edit', edit_action_path(action) %>
+          <%= link_to 'Remove', action_path(action), method: :delete, data: { confirm: "Are you sure?" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

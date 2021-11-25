@@ -1,0 +1,37 @@
+<%#
+  This form is used for both new and edit. The next line is used to figure out
+  which endpoint is needed based on the +lead+ object
+%>
+<% url = run.persisted? ? run_path(run) : runs_path %>
+
+<h1 class="title"><%= run.persisted? ? "Run ##{run.id}" : "New Run" %></h1>
+
+<div class="card">
+  <div class="card-content">
+    <div class="content">
+      <%= form_for run, url: url do |f| %>
+        <div class="field">
+          <%= f.label :lead_id, class: 'label' %>
+          <div class="control">
+            <div class="select">
+              <%= f.collection_select(:lead_id, Lead.all.order(:email), :id, :email, prompt: true) %>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :flow_id, class: 'label' %>
+          <div class="control">
+            <div class="select">
+              <%= f.collection_select(:flow_id, Flow.all.order(:name), :id, :name, prompt: true) %>
+            </div>
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <%= f.submit 'Save', class: 'button is-link' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

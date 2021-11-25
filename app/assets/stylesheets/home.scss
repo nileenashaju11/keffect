@@ -1,0 +1,26 @@
+@import "variables";
+
+.home-hero {
+  background: image_url('hero.jpg') no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: hsla(212, 100%, 17%, 0.5);
+  }
+  .title {
+    color: $light-blue;
+  }
+
+  margin-top: -3rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}

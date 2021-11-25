@@ -1,0 +1,63 @@
+{
+  "status": 200,
+  "body": {
+    "table": {
+      "_pagination": {
+        "table": {
+          "prev": null,
+          "next": null
+        },
+        "modifiable": true
+      },
+      "_links": {
+        "table": {
+          "self": "https://api2.frontapp.com/channels"
+        },
+        "modifiable": true
+      },
+      "_results": [
+        {
+          "table": {
+            "_links": {
+              "table": {
+                "self": "https://api2.frontapp.com/channels/cha_test",
+                "related": {
+                  "table": {
+                    "inbox": "https://api2.frontapp.com/inboxes/inb_test",
+                    "owner": "https://api2.frontapp.com/teams/tim_test"
+                  },
+                  "modifiable": true
+                }
+              },
+              "modifiable": true
+            },
+            "id": "cha_test",
+            "name": "demo+26819050db2e6d9a02cf@company.com",
+            "address": "test-26819050db2e6d9a02cf@in.frontapp.com",
+            "send_as": "test-26819050db2e6d9a02cf@in.frontapp.com",
+            "type": "smtp",
+            "settings": {
+              "table": {}
+            },
+            "is_private": false,
+            "is_valid": true
+          },
+          "modifiable": true
+        }
+      ]
+    },
+    "modifiable": true
+  },
+  "response_headers": {
+    "date": "Thu, 14 May 2020 20:52:38 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "924",
+    "connection": "keep-alive",
+    "x-protected-by": "Sqreen",
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "99",
+    "x-ratelimit-reset": "1589489617.945",
+    "etag": "W/\"39c-+UxXB86N7PFiQjX+TuH9fEZcgR4\"",
+    "x-front-time": "128"
+  }
+}

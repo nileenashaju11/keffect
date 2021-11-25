@@ -1,0 +1,35 @@
+<%#
+  This form is used for both new and edit. The next line is used to figure out
+  which endpoint is needed based on the +flow+ object
+%>
+<% url = flow.persisted? ? flow_path(flow) : flows_path %>
+
+<h1 class="title"><%= flow.name || "Flow ##{flow.id}" %></h1>
+
+<div class="card">
+  <div class="card-content">
+    <div class="content">
+      <%= form_for flow, url: url do |f| %>
+        <div class="field">
+          <%= f.label :zendesk_stage_id, class: 'label' %>
+          <div class="control">
+            <div class="select">
+              <%= f.collection_select(:zendesk_stage_id, ZendeskStage.all.order(:position), :id, :name, prompt: true, required: true) %>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :name, class: 'label' %>
+          <div class="control">
+            <%= f.text_field :name, class: 'input' %>
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <%= f.submit 'Save', class: 'button is-link is-rounded' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

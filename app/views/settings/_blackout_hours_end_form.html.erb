@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-content">
+    <div class="content">
+      <%= form_for @setting do |f| %>
+        <div class="field">
+          <%= f.label :value, 'Time to end the blackout', class: 'label' %>
+          <div class="control">
+            <div class="select">
+              <%= f.time_select(:value, selected: setting.value&.to_time, minute_step: 15, ampm: true, include_blank: true) %>
+            </div>
+            <p class="help">Starting at this time every day messages will resume sending.</p>
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <%= f.submit 'Save', class: 'button is-link' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

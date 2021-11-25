@@ -1,0 +1,7 @@
+# Set environment variables here
+S3_BUCKET: keffect-leads-dev
+SAMPLE_DELAY: '1'
+
+# Feature flags for features in development
+ENABLE_FRONT: 'false'
+ENABLE_SLYBROADCAST: 'false'

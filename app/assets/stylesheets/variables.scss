@@ -1,0 +1,26 @@
+// Set your brand colors
+$black: hsl(0, 0%, 4%); // Default Bulma Black
+$dark-blue: rgb(9, 25, 43);
+$light-blue: rgb(65, 185, 220);
+$grey: rgb(99, 110, 123);
+$light-grey: rgb(196, 204, 212);
+$light-grey-ish: rgb(246, 248, 250);
+$lightest-grey: rgb(245, 247, 250);
+$green: #205460;
+$purple: #242c60;
+
+// Update Bulma's global variables
+$primary: $dark-blue;
+$link: $light-blue;
+$body-background-color: $lightest-grey;
+
+// Update component variables
+$navbar-background-color: $dark-blue;
+$navbar-item-color: $light-grey;
+$button-padding-horizontal: 2em;
+$section-padding: 3rem 5rem;
+$table-row-hover-background-color: rgb(238, 242,247);
+$table-striped-row-even-hover-background-color: rgb(238, 242,247);
+$table-striped-row-even-background-color: $light-grey-ish;
+$table-cell-padding: 1.25em 0.75em;
+$label-color: $grey;

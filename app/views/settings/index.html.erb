@@ -1,0 +1,63 @@
+<nav class="level">
+  <!-- Left side -->
+  <div class="level-left">
+    <div class="level-item"><h1 class="title">Settings</h1></div>
+  </div>
+  <!-- Right side -->
+  <div class="level-right"></div>
+</nav>
+
+<div class="table-container">
+  <table class="table is-striped is-fullwidth">
+    <thead>
+      <tr>
+        <th>Setting</th>
+        <th>Value</th>
+        <th width=7%></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% setting = Setting.blackout_hours_start %>
+      <tr data-setting-id="<%= setting.id %>">
+        <td><%= setting.key.titleize %></td>
+        <td><%= setting.value&.to_time&.strftime('%H:%M') %></td>
+        <td><%= link_to 'Edit', edit_setting_path(setting) %></td>
+      </tr>
+
+      <% setting = Setting.blackout_hours_end %>
+      <tr data-setting-id="<%= setting.id %>">
+        <td><%= setting.key.titleize %></td>
+        <td><%= setting.value&.to_time&.strftime('%H:%M') %></td>
+        <td><%= link_to 'Edit', edit_setting_path(setting) %></td>
+      </tr>
+
+      <% setting = Setting.zendesk_sync_enabled %>
+      <tr data-setting-id="<%= setting.id %>">
+        <td><%= setting.key.titleize %></td>
+        <td><%= ActiveModel::Type::Boolean.new.cast(setting.value).to_s.titleize %></td>
+        <td><%= link_to 'Edit', edit_setting_path(setting) %></td>
+      </tr>
+
+      <% setting = Setting.acuity_to_mindbody_sync_enabled %>
+      <tr data-setting-id="<%= setting.id %>">
+        <td><%= setting.key.titleize %></td>
+        <td><%= ActiveModel::Type::Boolean.new.cast(setting.value).to_s.titleize %></td>
+        <td><%= link_to 'Edit', edit_setting_path(setting) %></td>
+      </tr>
+
+      <% setting = Setting.mindbody_to_acuity_sync_enabled %>
+      <tr data-setting-id="<%= setting.id %>">
+        <td><%= setting.key.titleize %></td>
+        <td><%= ActiveModel::Type::Boolean.new.cast(setting.value).to_s.titleize %></td>
+        <td><%= link_to 'Edit', edit_setting_path(setting) %></td>
+      </tr>
+
+      <% setting = Setting.automatically_start_new_runs_enabled %>
+      <tr data-setting-id="<%= setting.id %>">
+        <td><%= setting.key.titleize %></td>
+        <td><%= ActiveModel::Type::Boolean.new.cast(setting.value).to_s.titleize %></td>
+        <td><%= link_to 'Edit', edit_setting_path(setting) %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

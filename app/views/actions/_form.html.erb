@@ -1,0 +1,90 @@
+<%#
+  This form is used for both new and edit. The next line is used to figure out
+  which endpoint is needed based on the +action+ object
+%>
+<% url = action.persisted? ? action_path(action) : flow_actions_path(action.flow) %>
+<% fallback_text = action.persisted? ? "Action ##{action.id}" : 'New Action' %>
+
+<h1 class="title"><span class="has-text-grey-light"><%= action.flow.name %> /</span> <%= action.name || fallback_text %></h1>
+
+<div class="card">
+  <div class="card-content">
+    <div class="content">
+      <%= form_for action, as: :action_params,
+          url: url,
+          multipart: true,
+          data: { controller: 'action-form' } do |f| %>
+        <div class="field" data-target="action-form.field" data-types="email,voicemail,sms">
+          <%= f.label :name, class: 'label' %>
+          <div class="control">
+            <%= f.text_field :name, class: 'input' %>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :type, class: 'label' %>
+          <div class="control">
+            <div class="select">
+              <%= f.select :type, ['Email', 'SMS', 'Voicemail'], {}, { data: { target: 'action-form.type', action: 'change->action-form#displayFields' } } %>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :delay, class: 'label' %>
+          <div class="control">
+            <div class="select">
+              <%= f.select :delay, time_select_array %>
+            </div>
+          </div>
+          <p class="help">This is the amount of time that we will wait to run this action.</p>
+        </div>
+        <div class="field" data-target="action-form.field" data-types="email">
+          <%= f.label :subject, class: 'label' %>
+          <div class="control">
+            <%= f.text_field :subject, class: 'input', data: { email: 'true' } %>
+          </div>
+          <p class="help">
+            Add any of these tags to have the app insert data as needed:
+            <strong>[First Name]</strong>, <strong>[Acuity Appointment]</strong>
+          </p>
+          <p class="help"><strong>
+            [Acuity Appointment]</strong> will try to find an upcoming Acuity
+            appointment for the Lead's email address. If one is found it will
+            insert the date and time like this <strong>Tuesday at 3:15pm</strong>.
+            If we can't find the Acuity appointment for the email address it will
+            insert <strong>soon</strong>.
+          </p>
+        </div>
+        <div class="field" data-target="action-form.field" data-types="email,sms">
+          <%= f.label :content, class: 'label' %>
+          <div class="control">
+            <%= f.rich_text_area :content %>
+          </div>
+          <p class="help">
+            Add any of these tags to have the app insert data as needed:
+            <strong>[First Name]</strong>, <strong>[Acuity Appointment]</strong>
+          </p>
+          <p class="help"><strong>
+            [Acuity Appointment]</strong> will try to find an upcoming Acuity
+            appointment for the Lead's email address. If one is found it will
+            insert the date and time like this <strong>Tuesday at 3:15pm</strong>.
+            If we can't find the Acuity appointment for the email address it will
+            insert <strong>soon</strong>.
+          </p>
+        </div>
+        <div class="field" data-target="action-form.field" data-types="voicemail">
+          <%= f.label :audio_file, class: 'label' %>
+          <div class="control">
+            <%= f.file_field :audio_file %>
+          </div>
+          <p class="help">Audio file that will be used for the voicemail.</p>
+        </div>
+        <%= f.hidden_field :order, class: 'input' %>
+        <div class="field is-grouped">
+          <div class="control">
+            <%= f.submit 'Save', class: 'button is-link is-rounded' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
